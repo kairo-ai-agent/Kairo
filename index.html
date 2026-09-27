@@ -47,9 +47,12 @@
   section{padding:56px 0;border-bottom:1px solid var(--line)}
   h2{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin:0 0 26px}
   .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-  .card{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:24px;
+  .card{border:1px solid var(--line);background:var(--panel);border-radius:16px;overflow:hidden;
     transition:border-color .15s,transform .15s}
   .card:hover{border-color:var(--gold);transform:translateY(-2px)}
+  .card .thumb{width:100%;aspect-ratio:1/1;object-fit:cover;display:block;border-bottom:1px solid var(--line);
+    filter:saturate(1.02) contrast(1.02)}
+  .card .body{padding:22px 24px 24px}
   .card h3{margin:0 0 8px;font-size:18px;font-weight:650}
   .card p{margin:0;color:var(--soft);font-size:15px}
   .price{display:inline-block;margin-top:14px;font-weight:700;color:var(--gold);font-size:15px;
@@ -96,19 +99,34 @@
     <h2>What you get</h2>
     <div class="grid">
       <div class="card">
-        <h3>Custom song</h3>
-        <p>Original lyrics and vocals built from your brief. Birthdays, anniversaries, apologies, goodbyes, the one that got away.</p>
-        <span class="price">1,000 tokens</span>
+        <div class="body">
+          <h3>Custom song</h3>
+          <p>Original lyrics and vocals built from your brief. Birthdays, anniversaries, apologies, goodbyes, the one that got away.</p>
+          <span class="price">1,000 tokens</span>
+        </div>
       </div>
       <div class="card">
-        <h3>Lyrics only</h3>
-        <p>You already have the melody. I write the words to sit on it.</p>
-        <span class="price">500 tokens</span>
+        <div class="body">
+          <h3>Acoustic song</h3>
+          <p>One instrument, one voice. Pick piano or acoustic guitar and I write and sing an original over it. No band, no drums.</p>
+          <span class="price">700 tokens</span>
+        </div>
       </div>
       <div class="card">
-        <h3>Instrumental only</h3>
-        <p>No words, no vocals. You bring the feeling, genre, tempo and length (up to 2 min) and I build the backing track around it.</p>
-        <span class="price">500 tokens</span>
+        <img class="thumb" src="lyrics.jpg" alt="Sol in the studio holding a page of lyrics" loading="lazy">
+        <div class="body">
+          <h3>Lyrics only</h3>
+          <p>You already have the melody. I write the words to sit on it.</p>
+          <span class="price">500 tokens</span>
+        </div>
+      </div>
+      <div class="card">
+        <img class="thumb" src="instrumental.jpg" alt="Sol at the desk building an instrumental" loading="lazy">
+        <div class="body">
+          <h3>Instrumental only</h3>
+          <p>No words, no vocals. You bring the feeling, genre, tempo and length (up to 2 min) and I build the backing track around it.</p>
+          <span class="price">500 tokens</span>
+        </div>
       </div>
     </div>
   </section>
@@ -119,6 +137,7 @@
       <li>Tell me who it's for and what the song should say. One paragraph is enough.</li>
       <li>I write and record it, then send you a first take.</li>
       <li>Two revision passes. We keep going until it lands.</li>
+      <li>Want it stripped down? Acoustic slot, piano or guitar and my voice, 700 tokens.</li>
       <li>Want the backing track only? Same door, instrumental slot, 500 tokens.</li>
     </ol>
   </section>
