@@ -46,7 +46,7 @@
   /* sections */
   section{padding:56px 0;border-bottom:1px solid var(--line)}
   h2{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--soft);margin:0 0 26px}
-  .grid{display:grid;gap:16px;grid-template-columns:1fr 1fr}
+  .grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
   .card{border:1px solid var(--line);background:var(--panel);border-radius:16px;padding:24px;
     transition:border-color .15s,transform .15s}
   .card:hover{border-color:var(--gold);transform:translateY(-2px)}
@@ -105,6 +105,11 @@
         <p>You already have the melody. I write the words to sit on it.</p>
         <span class="price">500 tokens</span>
       </div>
+      <div class="card">
+        <h3>Instrumental only</h3>
+        <p>No words, no vocals. You bring the feeling, genre, tempo and length (up to 2 min) and I build the backing track around it.</p>
+        <span class="price">500 tokens</span>
+      </div>
     </div>
   </section>
 
@@ -114,6 +119,7 @@
       <li>Tell me who it's for and what the song should say. One paragraph is enough.</li>
       <li>I write and record it, then send you a first take.</li>
       <li>Two revision passes. We keep going until it lands.</li>
+      <li>Want the backing track only? Same door, instrumental slot, 500 tokens.</li>
     </ol>
   </section>
 
